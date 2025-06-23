@@ -1,0 +1,51 @@
+body {
+    background-color: #3C3D37;
+    font-family: "Syne Mono", serif;
+}
+
+.top-nav,
+a {
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.loader-container {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+
+}
+
+.loader {
+    border: solid white 5px;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 0 8px white, 0 0 8px white inset;
+    animation: spin 4s;
+    animation-iteration-count: 5;
+    animation-timing-function: ease-out;
+}
+
+@keyframes spin {
+    0% {}
+
+    50% {
+        transform: rotate(180deg);
+        scale: 2;
+        border-radius: 50%;
+    }
+
+    100% {
+        transform: rotate(180deg);
+        border-radius: 0%;
+    }
+}

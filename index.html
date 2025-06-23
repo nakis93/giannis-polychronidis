@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giannis Polychronidis | Frontend Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        };
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body
+    class="bg-white text-gray-800 dark:bg-gradient-to-tr dark:from-gray-900 dark:to-gray-800 dark:text-white font-sans transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="text-center py-20 px-6 relative">
+        <button id="themeToggle"
+            class="absolute right-6 top-6 text-xl text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">
+            <i class="fa-solid fa-moon hidden dark:inline"></i>
+            <i class="fa-solid fa-sun dark:hidden"></i>
+        </button>
+        <h1 class="text-5xl sm:text-6xl font-extrabold mb-4">Giannis Polychronidis</h1>
+        <p class="text-xl sm:text-2xl text-gray-600 dark:text-gray-300">Frontend Web Developer</p>
+        <p class="mt-4 max-w-xl mx-auto text-gray-500 dark:text-gray-400">Crafting sleek, performant UIs with Angular,
+            TypeScript, and Tailwind. Let's build something beautiful.</p>
+        <a href="#projects"
+            class="mt-8 inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3 rounded-full shadow transition">View
+            My Work</a>
+    </header>
+
+    <!-- About Me -->
+    <section id="about" class="max-w-3xl mx-auto px-6 py-12 text-center">
+        <h2 class="text-3xl font-bold mb-4">About Me</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            Hey! I'm <span class="font-semibold text-gray-800 dark:text-white">Giannis</span>, a frontend developer
+            based in Greece.<br />
+            I specialize in building modern dashboards and UI components with Angular, TypeScript, and Tailwind CSS.
+            <br /><br />
+            I love turning complex problems into elegant, responsive interfaces. When I'm not coding, I'm probably
+            lifting dumbbells, learning new tools, or helping others solve frontend puzzles.
+            <br /><br />
+            I'm currently open to freelance gigs and full-time roles where I can build useful tools and grow with a
+            great team.
+        </p>
+    </section>
+
+    <!-- Projects -->
+    <!-- Projects -->
+    <section id="projects" class="max-w-6xl mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+
+            <!-- Dashboard UI -->
+            <a href="project.html?id=dashboard-ui" class="block">
+                <div
+                    class="bg-gray-100 dark:bg-white/5 backdrop-blur p-4 rounded-2xl shadow-lg hover:scale-[1.02] transition group">
+                    <div class="overflow-hidden rounded-xl">
+                        <img src="images/dashboard-ui.png" alt="Dashboard UI"
+                            class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-semibold">Dashboard UI</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">Admin dashboard built with Angular,
+                            Tailwind & Firebase.</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Calendar Component -->
+            <a href="project.html?id=calendar-component" class="block">
+                <div
+                    class="bg-gray-100 dark:bg-white/5 backdrop-blur p-4 rounded-2xl shadow-lg hover:scale-[1.02] transition group">
+                    <div class="overflow-hidden rounded-xl">
+                        <img src="images/calendar-component.png" alt="Calendar Component"
+                            class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-semibold">Calendar Component</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">Custom calendar with multi-day
+                            selection & icon actions.</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Candidate Management -->
+            <a href="project.html?id=candidate-management" class="block">
+                <div
+                    class="bg-gray-100 dark:bg-white/5 backdrop-blur p-4 rounded-2xl shadow-lg hover:scale-[1.02] transition group">
+                    <div class="overflow-hidden rounded-xl">
+                        <img src="images/candidate-management.png" alt="Candidate Management"
+                            class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-semibold">Candidate Management</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">Tool to manage applications, forms &
+                            interviews.</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="text-center py-12 text-sm text-gray-500 dark:text-gray-400">
+        <p class="mb-2">&copy; 2025 Giannis Polychronidis. Built with 💻, ☕ & ❤️</p>
+        <p>
+            <a href="mailto:zjnakis@gmail.com" class="hover:underline">Contact Me</a> •
+            <a href="https://www.linkedin.com/in/giannis-polychronidis-330b4a233/" target="_blank"
+                class="hover:underline">LinkedIn</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
