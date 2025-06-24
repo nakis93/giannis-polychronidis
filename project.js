@@ -11,14 +11,14 @@ if (userTheme === "dark" || (!userTheme && systemTheme)) {
 
 const projects = {
   "dashboard-ui": {
-    title: "Dashboard UI",
+    title: "Dashboard UI for a B.I. application",
     subtitle: "Admin interface with analytics and charts",
     images: [
-      "images/pan1.png",
-      "images/pan2.png",
-      "images/pan3.png",
-      "images/pan4.png",
-      "images/pan5.png",
+      "images/west1.png",
+      "images/west2.png",
+      "images/west3.png",
+      "images/west4.png",
+      "images/west5.png",
     ],
     description:
       "A modern admin dashboard built with Angular and Tailwind CSS. Includes dynamic data visualization, dark mode, and responsive layout.",
@@ -128,5 +128,23 @@ if (!data) {
     updateCarousel();
   });
 
-  updateCarousel(); // initialize
+  updateCarousel();
 }
+
+function openImageModal(src) {
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  modalImg.src = src;
+  modal.classList.remove("hidden");
+}
+
+function closeImageModal() {
+  const modal = document.getElementById("imageModal");
+  modal.classList.add("hidden");
+}
+
+document.getElementById("imageModal").addEventListener("click", (e) => {
+  if (e.target.id === "imageModal") {
+    closeImageModal();
+  }
+});
