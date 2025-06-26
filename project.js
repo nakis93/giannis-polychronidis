@@ -33,7 +33,12 @@ const projects = {
   "candidate-management": {
     title: "Candidate Management",
     subtitle: "Manage applications and interview stages",
-    images: ["images/pic1.jpg", "images/pic2.jpg", "images/pic3.jpg"],
+    images: [
+      "images/parking1.png",
+      "images/parking2.png",
+      "images/parking3.png",
+      "images/parking4.png",
+    ],
     description:
       "A dashboard for HR teams to manage job candidates, forms, and feedback. Features filtering, role-based views, and Firebase integration.",
     tech: ["Angular", "Tailwind", "Firebase", "RxJS"],
