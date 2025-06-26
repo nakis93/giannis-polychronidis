@@ -1,14 +1,3 @@
-// === Theme init (copy from script.js) ===
-const userTheme = localStorage.getItem("theme");
-const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-if (userTheme === "dark" || (!userTheme && systemTheme)) {
-  document.documentElement.classList.add("dark");
-} else {
-  document.documentElement.classList.remove("dark");
-}
-// === End theme init ===
-
 const projects = {
   "dashboard-ui": {
     title: "Dashboard UI for a B.I. application",
@@ -29,7 +18,13 @@ const projects = {
   "calendar-component": {
     title: "Calendar Component",
     subtitle: "Interactive calendar with multi-select & icons",
-    images: ["images/pic1.jpg", "images/pic2.jpg", "images/pic3.jpg"],
+    images: [
+      "images/wps1.png",
+      "images/wps2.png",
+      "images/wps3.png",
+      "images/wps4.png",
+      "images/wps5.png",
+    ],
     description:
       "A custom calendar component featuring multi-day selection, event icons, and responsive design. Built for admin tools.",
     tech: ["Angular", "TypeScript", "SCSS"],

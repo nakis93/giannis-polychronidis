@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Giannis Polychronidis | Frontend Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="theme.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -20,19 +22,20 @@
             }
         };
     </script>
+    <script src="project.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body
     class="bg-white text-gray-800 dark:bg-gradient-to-tr dark:from-gray-900 dark:to-gray-800 dark:text-white font-sans transition-colors duration-300">
-
     <!-- Header -->
     <header class="text-center py-20 px-6 relative">
-        <button id="themeToggle"
+        <button onclick="toggleTheme()"
             class="absolute right-6 top-6 text-xl text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">
             <i class="fa-solid fa-moon hidden dark:inline"></i>
             <i class="fa-solid fa-sun dark:hidden"></i>
         </button>
+
         <h1 class="text-5xl sm:text-6xl font-extrabold mb-4">Giannis Polychronidis</h1>
         <p class="text-xl sm:text-2xl text-gray-600 dark:text-gray-300">Frontend Web Developer</p>
         <p class="mt-4 max-w-xl mx-auto text-gray-500 dark:text-gray-400">Crafting sleek, performant UIs with Angular,
@@ -58,63 +61,88 @@
         </p>
     </section>
 
-    <!-- Projects -->
-    <!-- Projects -->
-    <section id="projects" class="max-w-6xl mx-auto px-6 py-16">
+    <section id="projects" class="w-full mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
-        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="swiper pb-8">
+            <div class="swiper-wrapper">
 
-            <!-- Dashboard UI -->
-            <a href="project.html?id=dashboard-ui" class="block">
-                <div
-                    class="bg-gray-100 dark:bg-white/5 backdrop-blur p-4 rounded-2xl shadow-lg hover:scale-[1.02] transition group">
-                    <div class="overflow-hidden rounded-xl">
-                        <img src="images/west1.png" alt="Dashboard UI"
-                            class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
-                    </div>
-                    <div class="mt-4">
-                        <h3 class="text-xl font-semibold">Dashboard for a B.I. Application</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">Admin dashboard built with Angular,
-                            Tailwind & Firebase.</p>
-                    </div>
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <a href="project.html?id=dashboard-ui" class="block">
+                        <div class="bg-gray-100 dark:bg-white/5 backdrop-blur p-4  shadow-lg group">
+                            <div class="overflow-hidden rounded-xl">
+                                <img src="images/west1.png" alt="Dashboard UI"
+                                    class="w-full h-[400px] object-cover group-hover:scale-105 transition duration-300">
+                            </div>
+                            <div class="mt-4 text-center">
+                                <h3 class="text-2xl font-semibold">WEST BI</h3>
+                                <p class="text-gray-600 dark:text-gray-300 text-base mt-2">Admin dashboard built with
+                                    Angular and Bootstrap.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
 
-            <!-- Calendar Component -->
-            <a href="project.html?id=calendar-component" class="block">
-                <div
-                    class="bg-gray-100 dark:bg-white/5 backdrop-blur p-4 rounded-2xl shadow-lg hover:scale-[1.02] transition group">
-                    <div class="overflow-hidden rounded-xl">
-                        <img src="images/calendar-component.png" alt="Calendar Component"
-                            class="w-full h-48 object-contain group-hover:scale-105 transition duration-300">
-                    </div>
-                    <div class="mt-4">
-                        <h3 class="text-xl font-semibold">Calendar Component</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">Custom calendar with multi-day
-                            selection & icon actions.</p>
-                    </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <a href="project.html?id=calendar-component" class="block">
+                        <div class="bg-gray-100 dark:bg-white/5 backdrop-blur p-4  shadow-lg group">
+                            <div class="overflow-hidden rounded-xl">
+                                <img src="images/wps1.png" alt="Calendar Component"
+                                    class="w-full h-[400px] object-contain group-hover:scale-105 transition duration-300">
+                            </div>
+                            <div class="mt-4 text-center">
+                                <h3 class="text-2xl font-semibold">WPS Courier</h3>
+                                <p class="text-gray-600 dark:text-gray-300 text-base mt-2">Custom calendar with
+                                    multi-day selection & icon actions.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
 
-            <!-- Candidate Management -->
-            <a href="project.html?id=candidate-management" class="block">
-                <div
-                    class="bg-gray-100 dark:bg-white/5 backdrop-blur p-4 rounded-2xl shadow-lg hover:scale-[1.02] transition group">
-                    <div class="overflow-hidden rounded-xl">
-                        <img src="images/candidate-management.png" alt="Candidate Management"
-                            class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
-                    </div>
-                    <div class="mt-4">
-                        <h3 class="text-xl font-semibold">Candidate Management</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">Tool to manage applications, forms &
-                            interviews.</p>
-                    </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <a href="project.html?id=candidate-management" class="block">
+                        <div class="bg-gray-100 dark:bg-white/5 backdrop-blur p-4  shadow-lg group">
+                            <div class="overflow-hidden rounded-xl">
+                                <img src="images/parking1.png" alt="Candidate Management"
+                                    class="w-full h-[400px] object-cover group-hover:scale-105 transition duration-300">
+                            </div>
+                            <div class="mt-4 text-center">
+                                <h3 class="text-2xl font-semibold">Easy Spot Parking</h3>
+                                <p class="text-gray-600 dark:text-gray-300 text-base mt-2">Tool to manage applications,
+                                    forms & interviews.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
 
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <a href="project.html?id=candidate-management" class="block">
+                        <div class="bg-gray-100 dark:bg-white/5 backdrop-blur p-4  shadow-lg group">
+                            <div class="overflow-hidden rounded-xl">
+                                <img src="images/pan1.png" alt="Panidis Aluminium"
+                                    class="w-full h-[400px] object-cover group-hover:scale-105 transition duration-300">
+                            </div>
+                            <div class="mt-4 text-center">
+                                <h3 class="text-2xl font-semibold">Panidis Aluminium</h3>
+                                <p class="text-gray-600 dark:text-gray-300 text-base mt-2">Tool to manage applications,
+                                    forms & interviews.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Swiper navigation (optional) -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </section>
-    <!-- Footer -->
+
     <footer class="text-center py-12 text-sm text-gray-500 dark:text-gray-400">
         <p class="mb-2">&copy; 2025 Giannis Polychronidis. Built with 💻, ☕ & ❤️</p>
         <p>
@@ -124,6 +152,26 @@
         </p>
     </footer>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            effect: 'coverFlow',
+        });
+    </script>
+
 </body>
 
 </html>
