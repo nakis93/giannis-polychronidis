@@ -1,7 +1,7 @@
 const projects = {
-  "dashboard-ui": {
-    title: "Dashboard UI for a B.I. application",
-    subtitle: "Admin interface with analytics and charts",
+  "west-bi": {
+    title: "WEST B.I.",
+    subtitle: "A backoffice B.I. app for WEST S.A., a marketing company.",
     images: [
       "images/west1.png",
       "images/west2.png",
@@ -10,14 +10,20 @@ const projects = {
       "images/west5.png",
     ],
     description:
-      "A modern admin dashboard built with Angular and Tailwind CSS. Includes dynamic data visualization, dark mode, and responsive layout.",
-    tech: ["Angular", "Tailwind CSS", "Firebase", "Chart.js"],
+      "A dashboard for creating and managing marketing campaigns, tracking leads, and generating reports.",
+    tech: [
+      "Angular 13",
+      "Bootstrap",
+      "Google Maps APIs",
+      "Angular Material",
+      "Angular Forms",
+    ],
     github: "https://github.com/yourusername/dashboard-ui",
     live: "https://dashboard-ui-demo.netlify.app",
   },
-  "calendar-component": {
-    title: "Calendar Component",
-    subtitle: "Interactive calendar with multi-select & icons",
+  "wps-courier": {
+    title: "WPS Courier App",
+    subtitle: "A backoffice dashboard for West Postal Service (WPS).",
     images: [
       "images/wps1.png",
       "images/wps2.png",
@@ -26,13 +32,21 @@ const projects = {
       "images/wps5.png",
     ],
     description:
-      "A custom calendar component featuring multi-day selection, event icons, and responsive design. Built for admin tools.",
-    tech: ["Angular", "TypeScript", "SCSS"],
+      "Features stuff management, courier live-tracking, order management, zone creation on Google Maps and role-based access.",
+    tech: [
+      "Angular 17 (Standalone components)",
+      "Firebase (Firestore Database, Firebase Authentication)",
+      "Tailwind",
+      "Google Maps APIs",
+      "RabbitMQ",
+      "Chart.js",
+      "Reactive Forms",
+    ],
     github: "https://github.com/yourusername/calendar-component",
   },
-  "candidate-management": {
-    title: "Candidate Management",
-    subtitle: "Manage applications and interview stages",
+  "easy-spot": {
+    title: "Easy Spot",
+    subtitle: "A backoffice dashboard for a parking booking app.",
     images: [
       "images/parking1.png",
       "images/parking2.png",
@@ -40,8 +54,29 @@ const projects = {
       "images/parking4.png",
     ],
     description:
-      "A dashboard for HR teams to manage job candidates, forms, and feedback. Features filtering, role-based views, and Firebase integration.",
-    tech: ["Angular", "Tailwind", "Firebase", "RxJS"],
+      "Features parking management, customer management, calendar availability and statistics.",
+    tech: [
+      "Angular 16 (Standalone components)",
+      "Tailwind",
+      "Firebase",
+      "Google Maps APIs",
+      "Reactive Forms",
+    ],
+    github: "https://github.com/yourusername/candidate-dashboard",
+  },
+  "panidis-alum": {
+    title: "Panidis Aluminum",
+    subtitle: "A website for an aluminum/glass panels company",
+    images: [
+      "images/pan1.png",
+      "images/pan2.png",
+      "images/pan3.png",
+      "images/pan4.png",
+      "images/pan5.png",
+    ],
+    description:
+      "Features product catalog, online store, cart, dynamic form and checkout.",
+    tech: ["Angular 17 (Standalone components)", "Tailwind", "Firebase"],
     github: "https://github.com/yourusername/candidate-dashboard",
   },
 };
@@ -73,10 +108,10 @@ if (!data) {
     const liveLink = `<a href="${data.live}" target="_blank" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg mr-4">Live Demo</a>`;
     linksContainer.insertAdjacentHTML("beforeend", liveLink);
   }
-  if (data.github) {
-    const githubLink = `<a href="${data.github}" target="_blank" class="inline-block bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg">View Code</a>`;
-    linksContainer.insertAdjacentHTML("beforeend", githubLink);
-  }
+  // if (data.github) {
+  //   const githubLink = `<a href="${data.github}" target="_blank" class="inline-block bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg">View Code</a>`;
+  //   linksContainer.insertAdjacentHTML("beforeend", githubLink);
+  // }
 
   // === Carousel logic ===
   const carouselImage = document.getElementById("carouselImage");
