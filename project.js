@@ -75,7 +75,7 @@ const projects = {
       "images/pan5.png",
     ],
     description:
-      "Features product catalog, online store, cart, dynamic form and checkout.",
+      "Features product catalog, online store, cart, mobile view, dynamic form and checkout.",
     tech: ["Angular 17 (Standalone components)", "Tailwind", "Firebase"],
     github: "https://github.com/yourusername/candidate-dashboard",
   },
@@ -104,10 +104,10 @@ if (!data) {
 
   // Links
   const linksContainer = document.getElementById("projectLinks");
-  if (data.live) {
-    const liveLink = `<a href="${data.live}" target="_blank" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg mr-4">Live Demo</a>`;
-    linksContainer.insertAdjacentHTML("beforeend", liveLink);
-  }
+  // if (data.live) {
+  //   const liveLink = `<a href="${data.live}" target="_blank" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg mr-4">Live Demo</a>`;
+  //   linksContainer.insertAdjacentHTML("beforeend", liveLink);
+  // }
   // if (data.github) {
   //   const githubLink = `<a href="${data.github}" target="_blank" class="inline-block bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg">View Code</a>`;
   //   linksContainer.insertAdjacentHTML("beforeend", githubLink);
